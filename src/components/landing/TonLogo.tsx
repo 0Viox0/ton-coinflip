@@ -13,7 +13,7 @@ const TonLogo = () => {
                         ? "bg-[url(darkBg/tonLogoDarkBg.png)]"
                         : "bg-[url(whiteBg/tonLogoWhiteTheme.png)]"
                 }
-                w-[392px] h-[392px]`}
+                w-[392px] h-[392px] animate-floating`}
         />
     );
 };

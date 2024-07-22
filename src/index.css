@@ -25,3 +25,17 @@ body.light {
 .custom-blue-bg {
     background-color: #5c6786;
 }
+
+@keyframes floatAnimation {
+    0%,
+    100% {
+        transform: translateY(0) translateX(-50%);
+    }
+    50% {
+        transform: translateY(-10px) translateX(-50%);
+    }
+}
+
+.animate-floating {
+    animation: floatAnimation 5s ease-in-out infinite;
+}

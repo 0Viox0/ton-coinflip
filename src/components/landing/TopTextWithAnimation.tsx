@@ -1,10 +1,9 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState, useTransition } from "react";
 import { TypeAnimation } from "react-type-animation";
 import { ApplicationContext } from "../Application";
 
 const TopTextWithAnimation = () => {
-    const { t, isDarkMode, currentLanguageCode } =
-        useContext(ApplicationContext)!;
+    const { isDarkMode, t } = useContext(ApplicationContext)!;
 
     const [key, setKey] = useState<number>(0); // Key state for forcing component reload
 
@@ -14,7 +13,7 @@ const TopTextWithAnimation = () => {
 
     useEffect(() => {
         forceReloadAnimation();
-    }, [currentLanguageCode]);
+    }, [t("title2")]);
 
     return (
         <div
