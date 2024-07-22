@@ -14,6 +14,14 @@ body.light {
     color: #becbe4;
 }
 
+.custom-white-bg {
+    background-color: #becbe4;
+}
+
 .custom-blue-text {
     color: #798cc6;
+}
+
+.custom-blue-bg {
+    background-color: #5c6786;
 }
