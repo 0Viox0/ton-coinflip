@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body.dark {
+    background-color: #3c3c3c;
+}
+
+body.light {
+    background-color: #ffffff;
+}
+
+.custom-white-text {
+    color: #becbe4;
+}
+
+.custom-blue-text {
+    color: #798cc6;
+}
