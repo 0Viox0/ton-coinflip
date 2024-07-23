@@ -2,5 +2,40 @@
     "title1": "Cryptoroll",
     "title2": "Integration with TON blockchain",
     "title3": "Decentralized coinflip",
-    "moreInfo": "More info"
+    "moreInfo": "More info",
+
+    "howToPlay": "How to play",
+
+    "step1": "Press button to send TON to smart contract",
+    "step2": "Check your wallet and confirm transaction",
+    "step3": "Wait for your opponent",
+    "step4": "If you get 2x the money you had sent, you won",
+    "step5": "If you don't get anything in return, you lost",
+
+    "additionalInfo": "Additional info",
+
+    "paragraph1": "Everything is performed on TON blockchain, there are 5 smart contracts each tailored to execute its own randomizing logic for certain amount of funds sent.",
+
+    "view5LinksHeader": "You can view 5 of them here:",
+
+    "link1Label": "0.5 TON:",
+    "link1Actual": "https://testnet.tonscan.org/address/EQD5zd4z8WaUZyEDhj3O870kXrbHSmEpnqKi8LWhdV_WPt8R",
+
+    "link2Label": "1 TON:",
+    "link2Actual": "https://testnet.tonscan.org/address/EQC_8V6J3izWAxEQxsDynhuNwSJOHwlPREBwqyZY4oSs81Ky",
+
+    "link3Label": "2.5 TON:",
+    "link3Actual": "https://testnet.tonscan.org/address/EQBNIOFyYSpJRnLwnGl19kLi_PnfIFhJIOBJLy7qcnBogDTj",
+
+    "link4Label": "5 TON:",
+    "link4Actual": "https://testnet.tonscan.org/address/EQBb8DtRld8H2xGx7RpzWvEPHt3_vUA9gr2mQAOo40NQPA9l",
+
+    "link5Label": "10 TON:",
+    "link5Actual": "https://testnet.tonscan.org/address/EQCALLFFVS8m845SoY-vNPv8414niEKNsQtMUYsRF3UFMPyZ#transactions",
+
+    "paragraph2": "This project was created to make gampling TON coins decentralized, open source and free for everyone.",
+    "paragraph3": "We really hope you enjoyed what we made and appreciate our efforts to make your experience truly unique.",
+
+    "notRefundable": "Ton you send is not refundable",
+    "notRefundablePopup": "It means that once you've sent TON you must wait for opponent, you can't take it back."
 }

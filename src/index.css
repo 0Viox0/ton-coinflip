@@ -39,3 +39,27 @@ body.light {
 .animate-floating {
     animation: floatAnimation 5s ease-in-out infinite;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #d9d9d9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.custom-shadow {
+    box-shadow: 0px 0px 21.2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.triangle-custom-shadow {
+    box-shadow: -4px 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
