@@ -29,7 +29,7 @@ const AdditionalInfo = () => {
 
     return (
         <div className="mt-[28px]">
-            <h1 className="text-[29px] text-center font-semibold">
+            <h1 className="sm:text-[29px] text-[20px] text-center font-semibold">
                 {t("additionalInfo")}
             </h1>
             <p className="mt-[30px]">{t("paragraph1")}</p>
@@ -65,9 +65,9 @@ const AdditionalInfo = () => {
                         setIsDisplayNotRefundPopup((prevState) => !prevState)
                     }
                 >
-                    <p className="select-none ">{t("notRefundable")}</p>
+                    <p className="select-none">{t("notRefundable")}</p>
                     <div
-                        className="bg-[url(whiteBg/infoWhiteMode.png)] bg-contain 
+                        className="bg-[url(whiteBg/infoWhiteMode.png)] bg-contain bg-no-repeat
                                w-[20px] h-[20px] ml-[7px] relative"
                     >
                         <div onClick={(event) => event.stopPropagation()}>

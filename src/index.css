@@ -63,3 +63,21 @@ body.light {
 .triangle-custom-shadow {
     box-shadow: -4px 4px 4px 0px rgba(0, 0, 0, 0.1);
 }
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.delayed-appear {
+    opacity: 0;
+    animation: appear 0.00001s forwards 0.5s;
+}
