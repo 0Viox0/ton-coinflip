@@ -43,5 +43,7 @@
     "send2.5Ton": "Send 2.5 TON",
     "send1Ton": "Send 1 TON",
     "send5Ton": "Send 5 TON",
-    "send10Ton": "Send 10 TON"
+    "send10Ton": "Send 10 TON",
+
+    "proceding": "Transaction in progress"
 }
