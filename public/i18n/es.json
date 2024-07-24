@@ -2,5 +2,40 @@
     "title1": "Cryptoroll",
     "title2": "Integración con la cadena de bloques TON",
     "title3": "Coinflip descentralizado",
-    "moreInfo": "Seguir leyendo"
+    "moreInfo": "Seguir leyendo",
+
+    "howToPlay": "Cómo jugar",
+
+    "step1": "Pulse el botón para enviar TON al contrato inteligente",
+    "step2": "Compruebe su monedero y confirme la transacción",
+    "step3": "Esperar al adversario",
+    "step4": "Si usted consigue 2x las monedas que había enviado, usted ganó",
+    "step5": "Si no recibes nada a cambio, has perdido",
+
+    "additionalInfo": "Información adicional",
+
+    "paragraph1": "Todo se realiza en TON blockchain, hay 5 contratos inteligentes cada uno adaptado para ejecutar su propia lógica aleatoria para cierta cantidad de fondos enviados.",
+
+    "view5LinksHeader": "Puede verlos todos aquí:",
+
+    "link1Label": "0.5 TON:",
+    "link1Actual": "https://testnet.tonscan.org/address/EQD5zd4z8WaUZyEDhj3O870kXrbHSmEpnqKi8LWhdV_WPt8R",
+
+    "link2Label": "1 TON:",
+    "link2Actual": "https://testnet.tonscan.org/address/EQC_8V6J3izWAxEQxsDynhuNwSJOHwlPREBwqyZY4oSs81Ky",
+
+    "link3Label": "2.5 TON:",
+    "link3Actual": "https://testnet.tonscan.org/address/EQBNIOFyYSpJRnLwnGl19kLi_PnfIFhJIOBJLy7qcnBogDTj",
+
+    "link4Label": "5 TON:",
+    "link4Actual": "https://testnet.tonscan.org/address/EQBb8DtRld8H2xGx7RpzWvEPHt3_vUA9gr2mQAOo40NQPA9l",
+
+    "link5Label": "10 TON:",
+    "link5Actual": "https://testnet.tonscan.org/address/EQCALLFFVS8m845SoY-vNPv8414niEKNsQtMUYsRF3UFMPyZ#transactions",
+
+    "paragraph2": "Este proyecto fue creado para hacer que las monedas de gampling TON sean descentralizadas, de código abierto y gratuitas para todo el mundo.",
+    "paragraph3": "Esperamos de verdad que le haya gustado lo que hemos hecho y que aprecie nuestros esfuerzos por hacer que su experiencia sea realmente única.",
+
+    "notRefundable": "Ton que envíe no es reembolsable",
+    "notRefundablePopup": "Significa que una vez que has enviado TON debes esperar al oponente, no puedes retirarlo."
 }

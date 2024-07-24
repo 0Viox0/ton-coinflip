@@ -20,9 +20,10 @@ const MoreInfoSidebar = ({
                         rounded-l-[52px] overflow-x-hidden`}
         >
             <div
-                className="bg-[url(close.png)] w-[28px] h-[28px]
-                             absolute top-[36px] right-[36px]
-                             hover:cursor-pointer"
+                className={`${!isMoreInfoExpanded && "hidden"} 
+                             bg-[url(close.png)] w-[28px] h-[28px]
+                             fixed top-[36px] right-[36px]
+                             hover:cursor-pointer`}
                 onClick={() => setIsMoreInfoExpanded(false)}
             />
             <div className="pt-[93px] px-[31px] text-[17px]">

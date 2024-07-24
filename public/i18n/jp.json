@@ -1,1 +1,41 @@
-{}
+{
+    "title1": "Cryptoroll",
+    "title2": "TONブロックチェーンとの統合",
+    "title3": "分散型コインフリップ",
+    "moreInfo": "詳細はこちら",
+
+    "howToPlay": "プレーの仕方",
+
+    "step1": "ボタンを押してスマートコントラクトにTONを送信する",
+    "step2": "ウォレットをチェックし、取引を確認する",
+    "step3": "相手を待つ",
+    "step4": "送ったコインの2倍のコインを受け取ったら、あなたの勝ちです。",
+    "step5": "もし見返りがなければ、あなたは負けたことになる",
+
+    "additionalInfo": "追加情報",
+
+    "paragraph1": "全てはTONブロックチェーン上で実行され、5つのスマートコントラクトがあり、それぞれのスマートコントラクトは一定の送金額に対して独自のランダム化ロジックを実行するように調整されている。",
+
+    "view5LinksHeader": "そのすべてをここで見ることができる：",
+
+    "link1Label": "0.5 TON:",
+    "link1Actual": "https://testnet.tonscan.org/address/EQD5zd4z8WaUZyEDhj3O870kXrbHSmEpnqKi8LWhdV_WPt8R",
+
+    "link2Label": "1 TON:",
+    "link2Actual": "https://testnet.tonscan.org/address/EQC_8V6J3izWAxEQxsDynhuNwSJOHwlPREBwqyZY4oSs81Ky",
+
+    "link3Label": "2.5 TON:",
+    "link3Actual": "https://testnet.tonscan.org/address/EQBNIOFyYSpJRnLwnGl19kLi_PnfIFhJIOBJLy7qcnBogDTj",
+
+    "link4Label": "5 TON:",
+    "link4Actual": "https://testnet.tonscan.org/address/EQBb8DtRld8H2xGx7RpzWvEPHt3_vUA9gr2mQAOo40NQPA9l",
+
+    "link5Label": "10 TON:",
+    "link5Actual": "https://testnet.tonscan.org/address/EQCALLFFVS8m845SoY-vNPv8414niEKNsQtMUYsRF3UFMPyZ#transactions",
+
+    "paragraph2": "このプロジェクトは、ギャンブル用のTONコインを分散化し、オープンソースで、誰でも無料で使えるようにするために作られた。",
+    "paragraph3": "私たちが作ったものを楽しんでいただき、お客様の経験を本当にユニークなものにするための私たちの努力に感謝していただければ幸いです。",
+
+    "notRefundable": "お送りいただいた金額は返金できません。",
+    "notRefundablePopup": "つまり、一度TONを送ったら、相手を待たなければならない。"
+}

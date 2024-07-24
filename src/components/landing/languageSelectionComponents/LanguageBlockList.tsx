@@ -10,7 +10,7 @@ const LanguageBlockList = () => {
             <LanguageBlock lang="French" emojiPath="flags/FR.png" code="fr" />
             <LanguageBlock lang="Korean" emojiPath="flags/KR.png" code="kr" />
             <LanguageBlock lang="Japanese" emojiPath="flags/JP.png" code="jp" />
-            <LanguageBlock lang="Italian" emojiPath="flags/IT.png" code="it" />
+            <LanguageBlock lang="Chinese" emojiPath="flags/CN.png" code="cn" />
         </>
     );
 };
