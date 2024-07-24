@@ -13,6 +13,8 @@ import LanguageSelect from "./landing/LanguageSelect";
 import TonLogo from "./landing/TonLogo";
 import TonConnectButtonWrapper from "./landing/TonConnectButtonWrapper";
 import MoreInfo from "./landing/MoreInfo";
+import { useTonWallet } from "@tonconnect/ui-react";
+import FunctionalityButtons from "./functionality/FunctionalityButtons";
 
 interface ApplicationContextProps {
     changeLanguage: (newLanguageCode: string) => void;
@@ -20,6 +22,7 @@ interface ApplicationContextProps {
     isDarkMode: boolean;
     setIsDarkMode: Dispatch<SetStateAction<boolean>>;
     currentLanguageCode: string;
+    isWalletConnected: boolean;
 }
 
 export const ApplicationContext = createContext<ApplicationContextProps | null>(
@@ -30,6 +33,16 @@ const Application = () => {
     const { i18n, t } = useTranslation();
     const [currentLanguageCode, setCurrentLanguageCode] =
         useState<string>("En");
+    const [isDarkMode, setIsDarkMode] = useState<boolean>(true);
+
+    const wallet = useTonWallet();
+    const [isWalletConnected, setIsWalletConnected] = useState<boolean>(
+        wallet !== null,
+    );
+
+    useEffect(() => {
+        setIsWalletConnected(wallet !== null);
+    }, [wallet]);
 
     const changeLanguage = (newLanguageCode: string): void => {
         setCurrentLanguageCode(
@@ -37,8 +50,6 @@ const Application = () => {
         );
         i18n.changeLanguage(newLanguageCode);
     };
-
-    const [isDarkMode, setIsDarkMode] = useState<boolean>(true);
 
     useEffect(() => {
         const bodyElement = document.getElementsByTagName("body")[0];
@@ -60,6 +71,7 @@ const Application = () => {
                 isDarkMode,
                 setIsDarkMode,
                 currentLanguageCode,
+                isWalletConnected,
             }}
         >
             <div>
@@ -69,6 +81,7 @@ const Application = () => {
                 <TonLogo />
                 <TonConnectButtonWrapper />
                 <MoreInfo />
+                <FunctionalityButtons />
             </div>
         </ApplicationContext.Provider>
     );

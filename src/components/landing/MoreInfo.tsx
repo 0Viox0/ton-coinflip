@@ -3,7 +3,8 @@ import { ApplicationContext } from "../Application";
 import MoreInfoSidebar from "./MoreInfoSidebar";
 
 const MoreInfo = () => {
-    const { t, isDarkMode } = useContext(ApplicationContext)!;
+    const { t, isDarkMode, isWalletConnected } =
+        useContext(ApplicationContext)!;
     const [isMoreInfoExpanded, setIsMoreInfoExpanded] =
         useState<boolean>(false);
 
@@ -30,8 +31,12 @@ const MoreInfo = () => {
         <div ref={divRef}>
             <div
                 className={`${isDarkMode ? "custom-white-text" : "text-black"} 
-                         fixed sm:bottom-[63px] bottom-[40px] left-1/2 -translate-x-1/2
-                         text-[25px] flex-col hover:cursor-pointer z-0`}
+                            ${
+                                isWalletConnected
+                                    ? "bottom-[79px] right-[58px]"
+                                    : "bottom-[40px] left-1/2 -translate-x-1/2 sm:bottom-[63px]"
+                            }
+                            fixed text-[25px] flex-col hover:cursor-pointer z-0`}
                 onClick={() => setIsMoreInfoExpanded((prevState) => !prevState)}
             >
                 <div className="flex justify-around items-center">

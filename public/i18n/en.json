@@ -37,5 +37,11 @@
     "paragraph3": "We really hope you enjoyed what we made and appreciate our efforts to make your experience truly unique.",
 
     "notRefundable": "Ton you send is not refundable",
-    "notRefundablePopup": "It means that once you've sent TON you must wait for opponent, you can't take it back."
+    "notRefundablePopup": "It means that once you've sent TON you must wait for opponent, you can't take it back.",
+
+    "send0.5Ton": "Send 0.5 TON",
+    "send2.5Ton": "Send 2.5 TON",
+    "send1Ton": "Send 1 TON",
+    "send5Ton": "Send 5 TON",
+    "send10Ton": "Send 10 TON"
 }

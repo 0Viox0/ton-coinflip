@@ -8,7 +8,8 @@ import { ApplicationContext } from "../Application";
 
 const TonConnectButtonWrapper = () => {
     const [_, setOptions] = useTonConnectUI();
-    const { currentLanguageCode } = useContext(ApplicationContext)!;
+    const { currentLanguageCode, isWalletConnected } =
+        useContext(ApplicationContext)!;
 
     useEffect(() => {
         const languageCodeFormatted =
@@ -18,7 +19,14 @@ const TonConnectButtonWrapper = () => {
     }, [currentLanguageCode]);
 
     return (
-        <div className="fixed bottom-[15%] left-1/2 -translate-x-1/2">
+        <div
+            className={`fixed 
+                        ${
+                            isWalletConnected
+                                ? "bottom-[12%] left-[7%]"
+                                : "bottom-[15%] left-1/2 -translate-x-1/2"
+                        }`}
+        >
             <TonConnectButton />
         </div>
     );
