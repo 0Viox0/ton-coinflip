@@ -7,7 +7,7 @@ const DarkModeSwitchButton = () => {
 
     return (
         <DarkModeToggle
-            className="fixed top-[77px] left-[56px]"
+            className="fixed top-[77px] sm:left-[56px] left-[22px] md:scale-100 scale-[0.8]"
             onChange={setIsDarkMode}
             checked={isDarkMode}
             speed={2.3}

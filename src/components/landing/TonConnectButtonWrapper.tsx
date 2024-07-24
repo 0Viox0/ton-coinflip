@@ -18,7 +18,7 @@ const TonConnectButtonWrapper = () => {
     }, [currentLanguageCode]);
 
     return (
-        <div className="fixed bottom-[153px] left-1/2 -translate-x-1/2">
+        <div className="fixed bottom-[15%] left-1/2 -translate-x-1/2">
             <TonConnectButton />
         </div>
     );

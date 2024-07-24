@@ -1,5 +1,4 @@
-import { Dispatch, SetStateAction, useContext, useEffect } from "react";
-import { ApplicationContext } from "../Application";
+import { Dispatch, SetStateAction } from "react";
 import HowToPlay from "./moreInfoSideSection/HowToPlay";
 import AdditionalInfo from "./moreInfoSideSection/AdditionalInfo";
 
@@ -10,8 +9,6 @@ const MoreInfoSidebar = ({
     isMoreInfoExpanded: boolean;
     setIsMoreInfoExpanded: Dispatch<SetStateAction<boolean>>;
 }) => {
-    const { t } = useContext(ApplicationContext)!;
-
     return (
         <div
             className={`${isMoreInfoExpanded ? "w-[467px]" : "w-[0px]"} 

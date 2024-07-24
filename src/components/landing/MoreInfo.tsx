@@ -30,12 +30,14 @@ const MoreInfo = () => {
         <div ref={divRef}>
             <div
                 className={`${isDarkMode ? "custom-white-text" : "text-black"} 
-                         fixed bottom-[63px] left-1/2 -translate-x-1/2
-                         text-[25px] flex-col hover:cursor-pointer`}
+                         fixed sm:bottom-[63px] bottom-[40px] left-1/2 -translate-x-1/2
+                         text-[25px] flex-col hover:cursor-pointer z-0`}
                 onClick={() => setIsMoreInfoExpanded((prevState) => !prevState)}
             >
-                <div className="flex items-center">
-                    <div className="select-none">{t("moreInfo")}</div>
+                <div className="flex justify-around items-center">
+                    <div className="select-none text-center leading-7">
+                        {t("moreInfo")}
+                    </div>
                     <div
                         className={`
                            ${
@@ -43,11 +45,12 @@ const MoreInfo = () => {
                                    ? "bg-[url(darkBg/infoDarkMode.png)]"
                                    : "bg-[url(whiteBg/infoWhiteMode.png)]"
                            }
-                           w-[24px] h-[24px] ml-[7px]`}
+                           w-[24px] h-[24px] ml-[7px] flex-shrink-0
+                           bg-center bg-no-repeat`}
                     />
                 </div>
                 <div
-                    className={`${isDarkMode ? "custom-white-bg" : "bg-black"} h-[1.2px]`}
+                    className={`${isDarkMode ? "custom-white-bg" : "bg-black"} h-[1.2px] sm:mt-0`}
                 />
             </div>
             <MoreInfoSidebar

@@ -7,13 +7,14 @@ const TonLogo = () => {
     return (
         <div
             className={`
-                fixed left-1/2  -translate-x-1/2 top-[306px]  
+                fixed left-1/2 -translate-x-1/2 bg-no-repeat bg-contain bg-center
+                min-[1700px]:top-[306px] top-[240px]
                 ${
                     isDarkMode
                         ? "bg-[url(darkBg/tonLogoDarkBg.png)]"
                         : "bg-[url(whiteBg/tonLogoWhiteTheme.png)]"
                 }
-                w-[392px] h-[392px] animate-floating`}
+                min-[1700px]:w-[25%] md:w-[25%] w-[188px] h-[392px] animate-floating`}
         />
     );
 };

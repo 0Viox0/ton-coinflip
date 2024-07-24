@@ -26,13 +26,20 @@ const LanguageSelect = () => {
     };
 
     return (
-        <div className="fixed top-[90px] right-[76px]">
+        <div className="fixed top-[77px] sm:right-[76px] right-[32px] z-10">
             <IsLanguageSelectionExpandedContext.Provider
                 value={{ isExpanded, setIsExpanded }}
             >
                 <div
-                    className="custom-blue-bg w-[170px] h-[35px] rounded-[10px]
-                            custom-white-text flex justify-between items-center pl-[16px] pr-[8px]"
+                    className={`custom-blue-bg custom-white-text 
+                                md:w-[170px] w-[152px] h-[35px] pl-[16px] pr-[8px] 
+                                rounded-[10px] z-10
+                                flex justify-between items-center 
+                                ${
+                                    isExpanded &&
+                                    window.innerWidth <= 640 &&
+                                    "fixed top-0 left-0 w-full rounded-none"
+                                }`}
                     onClick={handleOnClick}
                 >
                     <span className="text-[20px] select-none">
@@ -41,9 +48,22 @@ const LanguageSelect = () => {
                     <LanguageSelectButtonIcons isExpanded={isExpanded} />
                 </div>
                 <div
-                    className={`${isExpanded ? "h-[350px]" : "h-[0px]"} 
-                            custom-blue-bg w-[170px] rounded-[10px] mt-[3px]
+                    className={`sm:hidden fixed top-0 left-0 custom-blue-bg w-full h-[35px] z-0
+                                     ${!isExpanded && "translate-y-[-35px]"}
+                                     transition-all duration-[0.5s] ease-out`}
+                ></div>
+                <div
+                    className={`hidden sm:block ${isExpanded ? "h-[350px]" : "h-[0px]"}
+                            custom-blue-bg md:w-[170px] w-[152px] rounded-[10px] mt-[3px]
                             transition-all duration-[0.5s] ease-out overflow-hidden`}
+                >
+                    <LanguageBlockList />
+                </div>
+                <div
+                    className={`sm:hidden custom-blue-bg rounded-b-[10px] z-20
+                                ${isExpanded ? "h-[350px]" : "h-[0px] translate-y-[-35px]"}
+                                transition-all duration-[0.5s] ease-out overflow-hidden
+                                fixed top-[35px] left-0 w-full`}
                 >
                     <LanguageBlockList />
                 </div>

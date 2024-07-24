@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState, useTransition } from "react";
+import { useContext, useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import { ApplicationContext } from "../Application";
 
@@ -18,7 +18,9 @@ const TopTextWithAnimation = () => {
     return (
         <div
             className={`${isDarkMode ? "custom-white-text" : "text-black"} 
-                        mt-[77px] text-center select-none`}
+                        text-center select-none 
+                        min-[1700px]:text-[4em] xl:text-[2.5em] md:text-[3em] text-[28px]
+                        mt-[181px] xl:mt-[77px]`}
         >
             <TypeAnimation
                 key={key}
@@ -31,7 +33,6 @@ const TopTextWithAnimation = () => {
                     3000,
                 ]}
                 speed={5}
-                style={{ fontSize: "4em" }}
                 repeat={Infinity}
                 preRenderFirstString={true}
             />
