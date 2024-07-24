@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { ApplicationContext } from "../../Application";
 import LiSmartContract from "./LiSmartContract";
 import NotRefundablePopup from "./NotRefundablePopup";
@@ -8,6 +8,24 @@ const AdditionalInfo = () => {
 
     const [isDisplayNotRefundPopup, setIsDisplayNotRefundPopup] =
         useState<boolean>(false);
+    const divRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (
+                divRef.current &&
+                !divRef.current.contains(event.target as Node)
+            ) {
+                setIsDisplayNotRefundPopup(false);
+            }
+        };
+
+        window.addEventListener("click", handleClickOutside);
+
+        return () => {
+            window.removeEventListener("click", handleClickOutside);
+        };
+    }, []);
 
     return (
         <div className="mt-[28px]">
@@ -40,19 +58,21 @@ const AdditionalInfo = () => {
             </ul>
             <p className="mt-[24px]">{t("paragraph2")}</p>
             <p className="mt-[24px]">{t("paragraph3")}</p>
-            <div
-                className="my-[35px] flex justify-center items-center hover:cursor-pointer select-none"
-                onClick={() =>
-                    setIsDisplayNotRefundPopup((prevState) => !prevState)
-                }
-            >
-                {t("Ton you send is not refundable")}
+            <div ref={divRef} className="my-[35px]  relative">
                 <div
-                    className="bg-[url(whiteBg/infoWhiteMode.png)] bg-contain 
+                    className="flex justify-center items-center hover:cursor-pointer"
+                    onClick={() =>
+                        setIsDisplayNotRefundPopup((prevState) => !prevState)
+                    }
+                >
+                    <p className="select-none ">{t("notRefundable")}</p>
+                    <div
+                        className="bg-[url(whiteBg/infoWhiteMode.png)] bg-contain 
                                w-[20px] h-[20px] ml-[7px]"
-                />
+                    />
+                </div>
+                {isDisplayNotRefundPopup && <NotRefundablePopup />}
             </div>
-            {isDisplayNotRefundPopup && <NotRefundablePopup />}
         </div>
     );
 };

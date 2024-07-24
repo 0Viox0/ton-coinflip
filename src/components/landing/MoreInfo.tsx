@@ -1,13 +1,33 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { ApplicationContext } from "../Application";
 import MoreInfoSidebar from "./MoreInfoSidebar";
 
 const MoreInfo = () => {
     const { t, isDarkMode } = useContext(ApplicationContext)!;
-    const [isMoreInfoExpanded, setIsMoreInfoExpanded] = useState<boolean>(true);
+    const [isMoreInfoExpanded, setIsMoreInfoExpanded] =
+        useState<boolean>(false);
+
+    const divRef = useRef<HTMLDivElement | null>(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (
+                divRef.current &&
+                !divRef.current.contains(event.target as Node)
+            ) {
+                setIsMoreInfoExpanded(false);
+            }
+        };
+
+        window.addEventListener("click", handleClickOutside);
+
+        return () => {
+            window.removeEventListener("click", handleClickOutside);
+        };
+    });
 
     return (
-        <>
+        <div ref={divRef}>
             <div
                 className={`${isDarkMode ? "custom-white-text" : "text-black"} 
                          fixed bottom-[63px] left-1/2 -translate-x-1/2
@@ -34,7 +54,7 @@ const MoreInfo = () => {
                 isMoreInfoExpanded={isMoreInfoExpanded}
                 setIsMoreInfoExpanded={setIsMoreInfoExpanded}
             />
-        </>
+        </div>
     );
 };
 
