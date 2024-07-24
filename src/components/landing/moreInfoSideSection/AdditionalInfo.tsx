@@ -68,10 +68,13 @@ const AdditionalInfo = () => {
                     <p className="select-none ">{t("notRefundable")}</p>
                     <div
                         className="bg-[url(whiteBg/infoWhiteMode.png)] bg-contain 
-                               w-[20px] h-[20px] ml-[7px]"
-                    />
+                               w-[20px] h-[20px] ml-[7px] relative"
+                    >
+                        <div onClick={(event) => event.stopPropagation()}>
+                            {isDisplayNotRefundPopup && <NotRefundablePopup />}
+                        </div>
+                    </div>
                 </div>
-                {isDisplayNotRefundPopup && <NotRefundablePopup />}
             </div>
         </div>
     );
