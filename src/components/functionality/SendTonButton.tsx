@@ -14,7 +14,7 @@ async function fireGetterMethod() {
     // Create Client
     const client = new TonClient({
         endpoint: "https://testnet.toncenter.com/api/v2/jsonRPC",
-        apiKey: "***REMOVED***a",
+        apiKey: "***",
     });
 
     // Call get method
