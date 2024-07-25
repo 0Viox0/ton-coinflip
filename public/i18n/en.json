@@ -45,5 +45,6 @@
     "send5Ton": "Send 5 TON",
     "send10Ton": "Send 10 TON",
 
-    "proceding": "Transaction in progress"
+    "proceeding": "Transaction in progress",
+    "toPlayWith": "There is a player to play with"
 }
