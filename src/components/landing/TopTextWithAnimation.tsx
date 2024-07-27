@@ -18,9 +18,9 @@ const TopTextWithAnimation = () => {
     return (
         <div
             className={`${isDarkMode ? "custom-white-text" : "text-black"} 
-                        text-center select-none 
+                        text-center select-none w-[90%] h-[100px]
                         min-[1700px]:text-[4em] xl:text-[2.5em] md:text-[3em] text-[28px]
-                        mt-[181px] xl:mt-[77px]`}
+                        absolute top-[17.62%] xl:top-[7.5%] left-[50%] translate-x-[-50%]`}
         >
             <TypeAnimation
                 key={key}

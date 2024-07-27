@@ -23,7 +23,8 @@ const TonConnectButtonWrapper = () => {
             className={`fixed 
                         ${
                             isWalletConnected
-                                ? "bottom-[12%] left-[7%]"
+                                ? `sm:bottom-[12%] sm:left-[7%] sm:top-auto bottom-auto top-[28px] left-[19%] 
+                                   sm:scale-100 scale-[0.7]`
                                 : "bottom-[15%] left-1/2 -translate-x-1/2"
                         }`}
         >

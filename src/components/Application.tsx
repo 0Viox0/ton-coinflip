@@ -15,6 +15,7 @@ import TonConnectButtonWrapper from "./landing/TonConnectButtonWrapper";
 import MoreInfo from "./landing/MoreInfo";
 import { useTonWallet } from "@tonconnect/ui-react";
 import FunctionalityButtons from "./functionality/FunctionalityButtons";
+import MobileChooseButton from "./functionality/MobileChooseButton";
 
 interface ApplicationContextProps {
     changeLanguage: (newLanguageCode: string) => void;
@@ -81,7 +82,11 @@ const Application = () => {
                 <TonLogo />
                 <TonConnectButtonWrapper />
                 <MoreInfo />
-                <FunctionalityButtons />
+                {window.innerWidth <= 640 ? (
+                    <MobileChooseButton />
+                ) : (
+                    <FunctionalityButtons />
+                )}
             </div>
         </ApplicationContext.Provider>
     );
