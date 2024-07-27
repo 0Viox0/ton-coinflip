@@ -1,109 +1,76 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { ApplicationContext } from "../Application";
-import LoadingTransaction from "./button/LoadingTransaction";
+import LookingForPlayer from "./button/LookingForPlayer";
 import PlayerToPlayWith from "./button/PlayerToPlayWith";
-import {
-    SendTransactionRequest,
-    useTonConnectUI,
-    useTonWallet,
-} from "@tonconnect/ui-react";
-import { Address, beginCell, toNano } from "ton-core";
-import { TonClient } from "ton";
+import CheckForPlayers from "./button/CheckForPlayers";
+import SendingTransaction from "./button/SendingTransaction";
+import PlayerNotFound from "./button/PlayerNotFound";
+import Success from "./button/Success";
+import SomethingWentWrong from "./button/SomethingWentWrong";
 
-async function fireGetterMethod() {
-    // Create Client
-    const client = new TonClient({
-        endpoint: "https://testnet.toncenter.com/api/v2/jsonRPC",
-        apiKey: "***",
-    });
-
-    // Call get method
-    const result = await client.runMethod(
-        Address.parse("EQDPipEQwturrTb9Ij8trcxdvFqUd0RhrIdBGFfphqK3f8mn"),
-        "getStateOfGame",
-    );
-
-    return result.stack.readNumber();
+export enum ButtonState {
+    CheckForAvailablePlayer,
+    LookingForPlayer,
+    PlayerFound,
+    PlayerNotFound,
+    SendingTransaction,
+    Success,
+    SomethingWentWrong,
 }
 
-const SendTonButton = ({ text }: { text: string }) => {
+const SendTonButton = ({
+    text,
+    address,
+    amountToSend,
+}: {
+    text: string;
+    address: string;
+    amountToSend: number;
+}) => {
     const [isHovered, setIsHovered] = useState<boolean>(false);
     const { isDarkMode } = useContext(ApplicationContext)!;
-    const [isTransactionInProgress, setIsTransactionInProgress] =
-        useState<boolean>(false);
     const [isAnimationGoing, setIsAnimationGoing] = useState<boolean>(false);
     const [isButtonGreen, setIsButtonGreen] = useState<boolean>(false);
+    const [buttonState, setButtonState] = useState<ButtonState>(
+        ButtonState.CheckForAvailablePlayer,
+    );
 
-    const [isUserAwaiting, setIsUserAwaiting] = useState<boolean>(false);
-
-    const [tonConnectUI, _] = useTonConnectUI();
-
-    const wallet = useTonWallet();
-
-    console.log(wallet);
-
-    const onClickHandler = () => {
-        if (isAnimationGoing) return;
-
-        setIsTransactionInProgress(true);
-        setIsAnimationGoing(true);
-        setIsButtonGreen(true);
-        setIsHovered(false);
-
-        const amoundToSend = 0.5;
-        const tonSmartContractAddress =
-            "EQDPipEQwturrTb9Ij8trcxdvFqUd0RhrIdBGFfphqK3f8mn";
-
-        const body = beginCell()
-            .storeUint(2, 32)
-            .storeCoins(toNano(amoundToSend))
-            .endCell();
-
-        const transaction: SendTransactionRequest = {
-            validUntil: Math.floor(Date.now() / 1000) + 360,
-            messages: [
-                {
-                    address: Address.parse(tonSmartContractAddress).toString(),
-                    amount: toNano(amoundToSend).toString(),
-                    payload: body.toBoc().toString("base64"),
-                },
-            ],
-        };
-
-        tonConnectUI.sendTransaction(transaction).then(() => {
-            setTimeout(() => {
-                setIsTransactionInProgress(false);
-                setIsAnimationGoing(false);
-                setIsButtonGreen(false);
-
-                fireGetterMethod().then((result) => {
-                    if (result === 0) {
-                        setIsUserAwaiting(false);
-                    } else if (result === 1) {
-                        setIsUserAwaiting(true);
-                    }
-                });
-            }, 1000);
-        });
+    const renderButtonState = (): JSX.Element => {
+        switch (buttonState) {
+            case ButtonState.CheckForAvailablePlayer:
+                return <CheckForPlayers setButtonState={setButtonState} />;
+            case ButtonState.LookingForPlayer:
+                return (
+                    <LookingForPlayer
+                        setButtonState={setButtonState}
+                        address={address}
+                    />
+                );
+            case ButtonState.PlayerFound:
+                return <PlayerToPlayWith />;
+            case ButtonState.PlayerNotFound:
+                return <PlayerNotFound setButtonState={setButtonState} />;
+            case ButtonState.SendingTransaction:
+                return (
+                    <SendingTransaction
+                        address={address}
+                        setIsButtonGreen={setIsButtonGreen}
+                        setIsAnimationGoing={setIsAnimationGoing}
+                        setIsHovered={setIsHovered}
+                        setButtonState={setButtonState}
+                        amountToSend={amountToSend}
+                    />
+                );
+            case ButtonState.Success:
+                return <Success setButtonState={setButtonState} />;
+            case ButtonState.SomethingWentWrong:
+                return <SomethingWentWrong setButtonState={setButtonState} />;
+        }
     };
-
-    useEffect(() => {
-        fireGetterMethod().then((result) => {
-            if (result === 0) {
-                setIsUserAwaiting(false);
-            } else if (result === 1) {
-                setIsUserAwaiting(true);
-            }
-        });
-    }, []);
 
     return (
         <div className="relative text-center">
-            {isTransactionInProgress ? (
-                <LoadingTransaction />
-            ) : (
-                isUserAwaiting && <PlayerToPlayWith />
-            )}
+            {renderButtonState()}
             <button
                 className={`${isDarkMode ? "custom-white-text border-[#becbe4]" : "text-black border-black"} 
                        w-[213px] h-[67px] bg-transparent relative
@@ -111,7 +78,12 @@ const SendTonButton = ({ text }: { text: string }) => {
                        border-[2px] rounded-[24px]`}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
-                onClick={onClickHandler}
+                onClick={() => {
+                    if (isAnimationGoing) {
+                        return;
+                    }
+                    setButtonState(ButtonState.SendingTransaction);
+                }}
             >
                 <div
                     className={`${isHovered ? "left-[-2px]" : "left-[-110%]"} 

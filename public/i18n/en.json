@@ -45,6 +45,11 @@
     "send5Ton": "Send 5 TON",
     "send10Ton": "Send 10 TON",
 
+    "checkForPlayers": "Check for available players",
     "proceeding": "Transaction in progress",
-    "toPlayWith": "There is a player to play with"
+    "looking": "Looking for players",
+    "playerNotFound": "No players found but you still can join and wait",
+    "toPlayWith": "There is a player to play with",
+    "success": "Success",
+    "wrong": "Something went wrong"
 }
