@@ -31,15 +31,19 @@ const LookingForPlayer = ({
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
         }, 800);
 
-        fireGetterMethod(address).then((result) => {
-            if (result === 0) {
-                setButtonState(ButtonState.PlayerNotFound);
-            } else if (result === 1) {
-                setButtonState(ButtonState.PlayerFound);
-            }
+        fireGetterMethod(address)
+            .then((result) => {
+                if (result === 0) {
+                    setButtonState(ButtonState.PlayerNotFound);
+                } else if (result === 1) {
+                    setButtonState(ButtonState.PlayerFound);
+                }
 
-            clearInterval(intervalId);
-        });
+                clearInterval(intervalId);
+            })
+            .catch(() => {
+                setButtonState(ButtonState.SomethingWentWrong);
+            });
 
         return () => clearInterval(intervalId);
     }, []);

@@ -12,7 +12,7 @@ const PlayerNotFound = ({
     useEffect(() => {
         setTimeout(
             () => setButtonState(ButtonState.CheckForAvailablePlayer),
-            10000,
+            3000,
         );
     }, []);
 

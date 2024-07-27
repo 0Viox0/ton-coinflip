@@ -47,7 +47,7 @@ const SendTonButton = ({
                     />
                 );
             case ButtonState.PlayerFound:
-                return <PlayerToPlayWith />;
+                return <PlayerToPlayWith setButtonState={setButtonState} />;
             case ButtonState.PlayerNotFound:
                 return <PlayerNotFound setButtonState={setButtonState} />;
             case ButtonState.SendingTransaction:

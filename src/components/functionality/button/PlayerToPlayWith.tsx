@@ -1,10 +1,22 @@
-import { useContext } from "react";
+import { Dispatch, SetStateAction, useContext, useEffect } from "react";
 import { ApplicationContext } from "../../Application";
 import darkModeDoneAll from "/darkBg/playerReadyDarkMode.png";
 import whiteModeDoneAll from "/whiteBg/playerReadyWhiteMode.png";
+import { ButtonState } from "../SendTonButton";
 
-const PlayerToPlayWith = () => {
+const PlayerToPlayWith = ({
+    setButtonState,
+}: {
+    setButtonState: Dispatch<SetStateAction<ButtonState>>;
+}) => {
     const { t, isDarkMode } = useContext(ApplicationContext)!;
+
+    useEffect(() => {
+        setTimeout(
+            () => setButtonState(ButtonState.CheckForAvailablePlayer),
+            3000,
+        );
+    }, []);
 
     return (
         <div>
