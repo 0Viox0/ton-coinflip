@@ -23,7 +23,7 @@ const PlayerToPlayWith = ({
             <div
                 className={`${isDarkMode ? "custom-white-text" : "text-black"}
                             text-[20px] text-center absolute w-[130%]
-                            top-[-110%] left-[50%] translate-x-[-50%]`}
+                            top-[-70%] -translate-y-1/2 left-[50%] translate-x-[-50%]`}
             >
                 <div>{t("toPlayWith")}</div>
                 <div className="flex justify-center">

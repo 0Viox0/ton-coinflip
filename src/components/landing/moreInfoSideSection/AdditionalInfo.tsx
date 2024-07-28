@@ -2,6 +2,13 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { ApplicationContext } from "../../Application";
 import LiSmartContract from "./LiSmartContract";
 import NotRefundablePopup from "./NotRefundablePopup";
+import {
+    contract_0dot5_link,
+    contract_10_link,
+    contract_1_link,
+    contract_2dot5_link,
+    contract_5_link,
+} from "../../../constants";
 
 const AdditionalInfo = () => {
     const { t } = useContext(ApplicationContext)!;
@@ -37,23 +44,23 @@ const AdditionalInfo = () => {
             <ul className="mt-[35px] space-y-[14px]">
                 <LiSmartContract
                     lable={t("link1Label")}
-                    link={t("link1Actual")}
+                    link={contract_0dot5_link}
                 />
                 <LiSmartContract
                     lable={t("link2Label")}
-                    link={t("link2Actual")}
+                    link={contract_1_link}
                 />
                 <LiSmartContract
                     lable={t("link3Label")}
-                    link={t("link3Actual")}
+                    link={contract_2dot5_link}
                 />
                 <LiSmartContract
                     lable={t("link4Label")}
-                    link={t("link4Actual")}
+                    link={contract_5_link}
                 />
                 <LiSmartContract
                     lable={t("link5Label")}
-                    link={t("link5Actual")}
+                    link={contract_10_link}
                 />
             </ul>
             <p className="mt-[24px]">{t("paragraph2")}</p>

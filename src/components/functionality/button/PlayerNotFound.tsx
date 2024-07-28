@@ -19,7 +19,7 @@ const PlayerNotFound = ({
     return (
         <div
             className={`${isDarkMode ? "custom-white-text" : "text-black"} 
-                        absolute top-[-90%] text-[17px]`}
+                        absolute top-[-70%] -translate-y-1/2 text-[17px]`}
         >
             <div>{t("playerNotFound")}</div>
         </div>

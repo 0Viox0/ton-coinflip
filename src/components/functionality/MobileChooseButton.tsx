@@ -40,8 +40,12 @@ const MobileChooseButton = () => {
     const [tonAmount, setTonAmount] = useState<MobileButtonChoice>(
         MobileButtonChoice.none,
     );
-
+    const [forceReloadKey, setForceReloadKey] = useState<number>(0);
     const mobileChooseButtonRef = useRef<HTMLDivElement | null>(null);
+
+    useEffect(() => {
+        setForceReloadKey((prevState) => prevState + 1);
+    }, [tonAmount]);
 
     useEffect(() => {
         const handleClick = (event: Event) => {
@@ -58,7 +62,7 @@ const MobileChooseButton = () => {
         return () => {
             window.removeEventListener("click", handleClick);
         };
-    });
+    }, []);
 
     const renderText = () => {
         switch (tonAmount) {
@@ -124,7 +128,7 @@ const MobileChooseButton = () => {
         >
             <div
                 className={`${!isWalletConnected && "hidden"} 
-                            fixed top-[35%] left-1/2 -translate-x-1/2 w-[96%]`}
+                            fixed top-[30%] left-1/2 -translate-x-1/2 w-[96%]`}
                 ref={mobileChooseButtonRef}
             >
                 <div
@@ -140,10 +144,12 @@ const MobileChooseButton = () => {
             {isChoosingTonAmount && <SelectTonMenu />}
             {tonAmount !== MobileButtonChoice.none && (
                 <div
-                    className="fixed left-1/2 -translate-x-1/2 bottom-[35%]
-                                bg-[#6093f5] bg-opacity-[0.56] rounded-[24px]"
+                    className={`${window.innerHeight <= 700 ? "bottom-[25%]" : "bottom-[35%]"} 
+                                fixed left-1/2 -translate-x-1/2 
+                                bg-[#6093f5] bg-opacity-[0.56] rounded-[24px]`}
                 >
                     <SendTonButton
+                        key={forceReloadKey}
                         text={getButtonInfo().text}
                         address={getButtonInfo().address}
                         amountToSend={getButtonInfo().amount}

@@ -28,5 +28,21 @@
     "paragraph3": "私たちが作ったものを楽しんでいただき、お客様の経験を本当にユニークなものにするための私たちの努力に感謝していただければ幸いです。",
 
     "notRefundable": "お送りいただいた金額は返金できません。",
-    "notRefundablePopup": "つまり、一度TONを送ったら、相手を待たなければならない。"
+    "notRefundablePopup": "つまり、一度TONを送ったら、相手を待たなければならない。",
+
+    "send0.5Ton": "0.5 TON を送る",
+    "send2.5Ton": "2.5 TON を送る",
+    "send1Ton": "1 TON を送る",
+    "send5Ton": "5 TON を送る",
+    "send10Ton": "10 TON を送る",
+
+    "checkForPlayers": "出場可能な選手をチェック",
+    "proceeding": "進行中の取引",
+    "looking": "選手募集",
+    "playerNotFound": "選手は見つかりませんでしたが、参加することは可能です。",
+    "toPlayWith": "一緒にプレーする選手がいる",
+    "success": "成功",
+    "wrong": "何かが間違っていた",
+
+    "chooseButtonMobile": "送信するTONの量を選択する"
 }

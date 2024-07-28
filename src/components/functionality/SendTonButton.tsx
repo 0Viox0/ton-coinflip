@@ -69,11 +69,11 @@ const SendTonButton = ({
     };
 
     return (
-        <div className="relative text-center">
+        <div className="relative text-center lg:scale-100 sm:scale-[0.7] scale-100">
             {renderButtonState()}
             <button
                 className={`${isDarkMode ? "custom-white-text border-[#becbe4]" : "text-black border-black"} 
-                       w-[213px] h-[67px] bg-transparent relative
+                       w-[213px] min-h-[67px] bg-transparent relative
                        text-[25px] overflow-hidden button-shadow
                        border-[2px] rounded-[24px]`}
                 onMouseEnter={() => setIsHovered(true)}
@@ -89,7 +89,7 @@ const SendTonButton = ({
                     className={`${isHovered ? "left-[-2px]" : "left-[-110%]"} 
                                 ${isDarkMode ? "border-[#becbe4]" : "border-black"}
                                 ${isButtonGreen ? "bg-green-400" : "bg-[#6093f5]"}
-                                absolute top-[-2px] w-[213px] h-[67px]
+                                absolute top-[-2px] w-[213px] h-[110%]
                                 opacity-[0.56] border-[2px] rounded-[24px]
                                 transition-all duration-[0.5s] ease-out z-[0]`}
                 />

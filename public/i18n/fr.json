@@ -28,5 +28,21 @@
     "paragraph3": "Nous espérons vraiment que vous avez aimé ce que nous avons fait et que vous appréciez nos efforts pour rendre votre expérience vraiment unique.",
 
     "notRefundable": "Ce que vous envoyez n'est pas remboursable",
-    "notRefundablePopup": "Cela signifie qu'une fois que vous avez envoyé une tonne, vous devez attendre l'adversaire, vous ne pouvez pas revenir en arrière."
+    "notRefundablePopup": "Cela signifie qu'une fois que vous avez envoyé une tonne, vous devez attendre l'adversaire, vous ne pouvez pas revenir en arrière.",
+
+    "send0.5Ton": "Envoyer 0,5 TON",
+    "send2.5Ton": "Envoyer 0,5 TON",
+    "send1Ton": "Envoyer 1 TON",
+    "send5Ton": "Envoyer 5 TON",
+    "send10Ton": "Envoyer 10 TON",
+
+    "checkForPlayers": "Vérifiez les joueurs disponibles",
+    "proceeding": "Transaction en cours",
+    "looking": "À la recherche de joueurs",
+    "playerNotFound": "Aucun joueur trouvé mais vous pouvez toujours rejoindre et attendre",
+    "toPlayWith": "Il y a un joueur avec qui jouer",
+    "success": "Succès",
+    "wrong": "Quelque chose s'est mal passé",
+
+    "chooseButtonMobile": "Choisissez le montant de TON à envoyer"
 }

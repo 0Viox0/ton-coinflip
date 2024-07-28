@@ -21,7 +21,7 @@ const SomethingWentWrong = ({
     return (
         <div
             className={`${isDarkMode ? "custom-white-text" : "text-black"} text-[20px] text-center
-                       absolute w-full top-[-110%] flex flex-col items-center`}
+                       absolute w-full top-[-80%] -translate-y-1/2 flex flex-col items-center`}
         >
             <div className="mb-[8px]">{t("wrong")}</div>
             <img

@@ -27,8 +27,22 @@
     "paragraph2": "Este proyecto fue creado para hacer que las monedas de juego TON sean descentralizadas, de código abierto y gratuitas para todo el mundo.",
     "paragraph3": "Esperamos de verdad que le haya gustado lo que hemos hecho y que aprecie nuestros esfuerzos por hacer que su experiencia sea realmente única.",
 
-    "notRefundable": "Ton que envíe no es reembolsable",
-    "notRefundablePopup": "Significa que una vez que has enviado TON debes esperar al oponente, no puedes retirarlo.",
+    "notRefundable": "El tonelaje que envíes no es reembolsable",
+    "notRefundablePopup": "Significa que una vez que hayas enviado TON debes esperar a tu oponente, no podrás recuperarlo.",
 
-    "proceeding": "Transacción en curso"
+    "send0.5Ton": "Envía 0,5 TON",
+    "send2.5Ton": "Envía 2,5 TON",
+    "send1Ton": "Envía 1 TON",
+    "send5Ton": "Envía 5 TON",
+    "send10Ton": "Envía 10 TON",
+
+    "checkForPlayers": "Comprobar jugadores disponibles",
+    "proceeding": "Transacción en proceso",
+    "looking": "Buscando jugadores",
+    "playerNotFound": "No se encontraron jugadores, pero aún puedes unirte y esperar.",
+    "toPlayWith": "Hay un jugador con quien jugar",
+    "success": "Éxito",
+    "wrong": "Algo salió mal",
+
+    "chooseButtonMobile": "Elige la cantidad de TON a enviar"
 }

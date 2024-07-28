@@ -33,7 +33,7 @@ const MoreInfo = () => {
                 className={`${isDarkMode ? "custom-white-text" : "text-black"} 
                             ${
                                 isWalletConnected
-                                    ? `bottom-[79px] sm:right-[58px] sm:left-auto sm:translate-x-0 
+                                    ? `sm:bottom-[79px] bottom-[30px] sm:right-[58px] sm:left-auto sm:translate-x-0 
                                        left-1/2 -translate-x-1/2 right-auto`
                                     : "bottom-[40px] left-1/2 -translate-x-1/2 sm:bottom-[63px]"
                             }

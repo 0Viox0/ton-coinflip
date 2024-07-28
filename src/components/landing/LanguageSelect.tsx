@@ -54,13 +54,13 @@ const LanguageSelect = () => {
                 >
                     <div
                         className={`custom-blue-bg custom-white-text 
-                                md:w-[170px] w-[152px] h-[35px] pl-[16px] pr-[8px] 
+                                md:w-[170px] w-[110px] h-[35px] pl-[16px] pr-[8px] 
                                 rounded-[10px] z-10
                                 flex justify-between items-center 
                                 ${
                                     isExpanded &&
                                     window.innerWidth <= 640 &&
-                                    "fixed top-0 left-0 w-full rounded-none"
+                                    "fixed top-0 left-0 w-[100%] rounded-none"
                                 }`}
                         onClick={handleOnClick}
                     >
