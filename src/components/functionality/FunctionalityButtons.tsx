@@ -24,7 +24,7 @@ const FunctionalityButtons = () => {
             <div
                 className={`fixed 
                              ${
-                                 window.innerHeight < 800
+                                 window.innerHeight < 700
                                      ? "left-[40%] bottom-[40%]"
                                      : " md:left-[25%] left-[10%] bottom-[21%]"
                              }`}
@@ -37,7 +37,7 @@ const FunctionalityButtons = () => {
             </div>
             <div
                 className={`fixed ${
-                    window.innerHeight < 800
+                    window.innerHeight < 700
                         ? "left-[25%] bottom-[10%]"
                         : "left-[50%] translate-x-[-50%] bottom-[5%]"
                 } `}
@@ -50,7 +50,7 @@ const FunctionalityButtons = () => {
             </div>
             <div
                 className={`fixed ${
-                    window.innerHeight < 800
+                    window.innerHeight < 700
                         ? "right-[25%] bottom-[10%]"
                         : "md:right-[25%] right-[10%] bottom-[21%]"
                 }`}

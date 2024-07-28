@@ -10,7 +10,6 @@ const TonLogo = () => {
                 fixed left-1/2 -translate-x-1/2 sm:top-[30%] sm:bottom-auto
                 bg-no-repeat bg-contain bg-center
                 ${window.innerHeight <= 700 && "hidden"}
-                ${window.innerHeight <= 800 && window.innerWidth > 640 && "hidden"}
                 ${
                     isDarkMode
                         ? "bg-[url(darkBg/tonLogoDarkBg.png)]"
