@@ -1,4 +1,4 @@
-export const currentHost = "http://172.27.33.20:5173";
+export const currentHost = "http://cryptoroll-coinflip.vercel.app";
 
 export const manifestUrl: string =
     "https://raw.githubusercontent.com/Incept10n/CoinFlip/master/manifest/tonconnect-manifest.json";
