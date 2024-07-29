@@ -19,7 +19,7 @@ const MoreInfoSidebar = ({
             >
                 <div
                     className={`${!isMoreInfoExpanded && "hidden"} 
-                             bg-[url(close.png)] w-[28px] h-[28px]
+                             bg-[url(/close.png)] w-[28px] h-[28px]
                              fixed top-[36px] right-[36px]
                              hover:cursor-pointer`}
                     onClick={() => setIsMoreInfoExpanded(false)}
@@ -37,7 +37,7 @@ const MoreInfoSidebar = ({
             >
                 <div
                     className={`${isMoreInfoExpanded ? "delayed-appear" : "opacity-0"} 
-                             bg-[url(close.png)] w-[28px] h-[28px]
+                             bg-[url(/close.png)] w-[28px] h-[28px]
                              fixed top-[13%] right-[8%]
                              hover:cursor-pointer`}
                     onClick={() => setIsMoreInfoExpanded(false)}

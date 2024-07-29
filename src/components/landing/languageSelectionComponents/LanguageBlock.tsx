@@ -29,7 +29,7 @@ const LanguageBlock = ({
             <div
                 className={`ml-[22px] w-[20px] h-[20px] 
                             bg-contain bg-no-repeat bg-center`}
-                style={{ backgroundImage: `url(${emojiPath})` }}
+                style={{ backgroundImage: `url(/${emojiPath})` }}
             />
             <div className="ml-[15px]">{lang}</div>
         </div>

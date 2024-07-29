@@ -12,8 +12,8 @@ const TonLogo = () => {
                 ${window.innerHeight <= 700 && "hidden"}
                 ${
                     isDarkMode
-                        ? "bg-[url(darkBg/tonLogoDarkBg.png)]"
-                        : "bg-[url(whiteBg/tonLogoWhiteTheme.png)]"
+                        ? "bg-[url(/darkBg/tonLogoDarkBg.png)]"
+                        : "bg-[url(/whiteBg/tonLogoWhiteTheme.png)]"
                 }
                 min-[1700px]:w-[25%] md:w-[25%] 
                 md:h-[45%] animate-floating

@@ -48,8 +48,8 @@ const MoreInfo = () => {
                         className={`
                            ${
                                isDarkMode
-                                   ? "bg-[url(darkBg/infoDarkMode.png)]"
-                                   : "bg-[url(whiteBg/infoWhiteMode.png)]"
+                                   ? "bg-[url(/darkBg/infoDarkMode.png)]"
+                                   : "bg-[url(/whiteBg/infoWhiteMode.png)]"
                            }
                            w-[24px] h-[24px] ml-[7px] flex-shrink-0
                            bg-center bg-no-repeat`}

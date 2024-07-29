@@ -74,7 +74,7 @@ const AdditionalInfo = () => {
                 >
                     <p className="select-none">{t("notRefundable")}</p>
                     <div
-                        className="bg-[url(whiteBg/infoWhiteMode.png)] bg-contain bg-no-repeat
+                        className="bg-[url(/whiteBg/infoWhiteMode.png)] bg-contain bg-no-repeat
                                w-[20px] h-[20px] ml-[7px] relative"
                     >
                         <div onClick={(event) => event.stopPropagation()}>
