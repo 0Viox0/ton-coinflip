@@ -8,7 +8,6 @@ import {
 import { useTranslation } from "react-i18next";
 import TopTextWithAnimation from "./landing/TopTextWithAnimation";
 import { TFunction } from "i18next";
-import DarkModeSwitchButton from "./landing/DarkModeSwitchButton";
 import LanguageSelect from "./landing/LanguageSelect";
 import TonLogo from "./landing/TonLogo";
 import TonConnectButtonWrapper from "./landing/TonConnectButtonWrapper";
@@ -16,6 +15,7 @@ import MoreInfo from "./landing/MoreInfo";
 import { useTonWallet } from "@tonconnect/ui-react";
 import FunctionalityButtons from "./functionality/FunctionalityButtons";
 import MobileChooseButton from "./functionality/MobileChooseButton";
+import DarkModeSwitchButton from "./landing/DarkModeSwitchButton";
 
 interface ApplicationContextProps {
     changeLanguage: (newLanguageCode: string) => void;
