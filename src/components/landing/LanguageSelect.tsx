@@ -60,7 +60,7 @@ const LanguageSelect = () => {
                                 ${
                                     isExpanded &&
                                     window.innerWidth <= 640 &&
-                                    "fixed top-0 left-0 w-[100%] rounded-none"
+                                    "fixed top-0 left-0 w-full rounded-none"
                                 }`}
                         onClick={handleOnClick}
                     >

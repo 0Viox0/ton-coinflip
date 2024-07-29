@@ -67,9 +67,7 @@ const Application = () => {
     // TODO: PRODUCTION SETUP
     // TODO: make a lot of changes to the constants.ts file:
     // TODO: update links to smart contracts and addresses
-    // TODO: update host
     // TODO: update toncenter url to use mainnet in domain
-    // TODO: make sure to add environment variable or load .env file to whenever im uploading
 
     return (
         <ApplicationContext.Provider
